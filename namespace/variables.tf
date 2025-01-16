@@ -45,7 +45,7 @@ variable "owner" {
 
 variable "source_code" {
   description = "The URL of the source code repository"
-  default     = ""
+  default     = "github.com/ministryofjustice/cloud-platform-terraform-test-application"
 }
 
 # enable variables
