@@ -14,3 +14,29 @@ This module creates a namespace in the cloud platform.
 This module creates an SQS queue and a test application that sends messages to the queue.
   - [README](modules/sqs/README.md)
   - [example](modules/sqs/examples)
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+No providers.
+
+## Modules
+
+No modules.
+
+## Resources
+
+No resources.
+
+## Inputs
+
+No inputs.
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
