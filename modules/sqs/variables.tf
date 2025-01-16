@@ -54,7 +54,11 @@ variable "source_code" {
 }
 
 variable "module_release" {
-  description = "The version of the module to use"
-  default     = "v5.1.0"
+  description = "The version of the cloud platform sqs module to use"
+
   
+}
+
+variable "namespace_module_release" {
+  description = "The version of the namespace module to use"
 }

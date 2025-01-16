@@ -46,7 +46,7 @@ resource "aws_sqs_queue_policy" "module_test_sqs_policy" {
 }
 
 module "namespace_create" {
-  source = "../../namespace"
+  source = "github.com/ministryofjustice/cloud-platform-terraform-test-applications/namespace?ref=${var.namespace_module_release}"
 
   namespace_enabled = "true"
   route53_enabled   = "true"
