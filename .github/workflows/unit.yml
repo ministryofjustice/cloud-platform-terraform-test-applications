@@ -13,7 +13,6 @@ jobs:
           terraform_version: 1.2.5
           terraform_wrapper: false
       - run: |
-          echo 'sqs_test_application_release = "main"' > terraform.tfvars
           terraform init
           terraform validate
         working-directory: modules/sqs/examples/
