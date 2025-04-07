@@ -1,5 +1,5 @@
 module "module_test_sqs" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-sqs?ref=${var.sqs_module_release}" # use the latest release
+  source = "github.com/ministryofjustice/cloud-platform-terraform-sqs?ref=fc1d2870ad2e3928f574e81ee804b0ddcca8058f" # use the latest release
 
   # Queue configuration
   sqs_name        = "module-test-queue"
