@@ -1,5 +1,5 @@
 module "module_test_sqs" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-sqs?ref=${var.sqs_module_release}" # use the latest release
+  source = "github.com/ministryofjustice/cloud-platform-terraform-sqs?ref=5.1.0"
 
   # Queue configuration
   sqs_name        = "module-test-queue"
@@ -8,10 +8,10 @@ module "module_test_sqs" {
   # Tags
   business_unit          = var.business_unit
   application            = var.application
-  is_production          = var.is_production
-  team_name              = var.team_name # also used for naming the queue
-  namespace              = var.namespace
-  environment_name       = var.environment
+  is_production         = var.is_production
+  team_name             = var.team_name
+  namespace             = var.namespace
+  environment_name      = var.environment
   infrastructure_support = var.infrastructure_support
 
   depends_on = [ module.namespace_create, resource.kubernetes_deployment_v1.module_test_deployment ]
@@ -30,17 +30,9 @@ resource "aws_sqs_queue_policy" "module_test_sqs_policy" {
           "Effect": "Allow",
           "Principal": {"AWS": "*"},
           "Resource": "${module.module_test_sqs.sqs_arn}",
-          "Action": "SQS:SendMessage",
-          "Condition":
-            {
-              "ArnEquals":
-                {
-                  "aws:SourceArn": "${module.module_test_sqs.topic_arn}"
-                }
-              }
+          "Action": "SQS:SendMessage"
         }
       ]
   }
   EOF
-  depends_on = [module.module_test_sqs]
 }
