@@ -1,5 +1,5 @@
 module "sqs_application" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-test-applications//modules/sqs?ref=main"
+  source = "github.com/ministryofjustice/cloud-platform-terraform-test-applications//modules/sqs?ref=2c252d0f9bfaf3951f5a1b023369db565acc0e4b"
 
   namespace = "module-sqstest-namespace"
   module_release = "5.1.0"
