@@ -15,11 +15,4 @@ module "sqs_application" {
 
   # Optional SQS configuration
   encrypt_sqs_kms = true
-  # visibility_timeout_seconds = 30  # Uncomment if you need to override defaults
-  # message_retention_seconds = 345600
-  # max_message_size = 262144
-  # delay_seconds = 0
-  # receive_wait_time_seconds = 0
-  # fifo_queue = false
-  # kms_data_key_reuse_period_seconds = 300
 }
