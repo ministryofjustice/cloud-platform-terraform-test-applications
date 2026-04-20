@@ -53,7 +53,7 @@ variable "source_code" {
   default     = "github.com/ministryofjustice/cloud-platform-terraform-test-applications"
 }
 
-variable "sqs_module_release" {
+variable "module_release" {
   description = "The version of the cloud platform sqs module to use"
 }
 
