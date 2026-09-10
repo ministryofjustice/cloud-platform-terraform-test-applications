@@ -53,25 +53,17 @@ variable "source_code" {
   default     = "github.com/ministryofjustice/cloud-platform-terraform-test-applications"
 }
 
-variable "sqs_module_release" {
-  description = "The version of the cloud platform sqs module to use"
-}
-
-variable "namespace_module_release" {
-  description = "The version of the namespace module to use"
-}
-
 variable "namespace_enabled" {
   description = "Enable the creation of a namespace"
-  type = bool
+  type        = bool
 }
 
 variable "route53_enabled" {
   description = "Enable the creation of a route53 record"
-  type = bool
+  type        = bool
 }
 
 variable "rolebinding_enabled" {
   description = "Enable the creation of a rolebinding"
-  type = bool
+  type        = bool
 }

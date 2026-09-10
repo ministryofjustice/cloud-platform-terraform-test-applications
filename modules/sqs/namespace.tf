@@ -1,8 +1,8 @@
 module "namespace_create" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-test-applications/namespace?ref=${var.namespace_module_release}"
+  source = "../../namespace"
 
-  namespace_enabled = var.namespace_enabled
-  route53_enabled   = var.route53_enabled
+  namespace_enabled   = var.namespace_enabled
+  route53_enabled     = var.route53_enabled
   rolebinding_enabled = var.rolebinding_enabled
 
   namespace = var.namespace

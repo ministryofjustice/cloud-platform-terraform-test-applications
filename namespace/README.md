@@ -8,7 +8,7 @@ This Terraform module will create an SQS queue and a test application that sends
 
 ```hcl
 module "namespace_create" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-test-applications/namespace?ref=${var.namespace_module_release}"
+  source = "github.com/ministryofjustice/cloud-platform-terraform-test-applications/namespace?ref=main"
 
   namespace_enabled = "true"
   route53_enabled   = "true"

@@ -1,16 +1,16 @@
 module "namespace_create" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-test-applications/namespace?ref=${var.namespace_module_release}"
+  source = "../"
 
-  namespace_enabled = "true"
-  route53_enabled   = "true"
-  rolebinding_enabled = "true"
+  namespace_enabled   = true
+  route53_enabled     = true
+  rolebinding_enabled = true
 
-  namespace = var.namespace
+  namespace = "module-test-namespace"
 
-  business_unit = var.business_unit
-  slack_channel = var.slack_channel
-  application   = var.application
-  owner         = var.owner
-  source_code   = var.source_code
-  team_name     = var.team_name
+  business_unit = "Platforms"
+  slack_channel = "cloud-platform"
+  application   = "module-test-application"
+  owner         = "Cloud Platform: platforms@digital.justice.gov.uk"
+  source_code   = "github.com/ministryofjustice/cloud-platform-terraform-test-application"
+  team_name     = "webops"
 }

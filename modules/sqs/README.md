@@ -8,11 +8,12 @@ This Terraform module will create an SQS queue and a test application that sends
 
 ```hcl
 module "sqs_application" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-test-applications/modules/sqs?ref=${var.sqs_test_application_release}"
+  source = "github.com/ministryofjustice/cloud-platform-terraform-test-applications/modules/sqs?ref=main"
 
   namespace = "module-sqstest-namespace"
-  sqs_module_release = "v5.1.0"
-  namespace_module_release = "main"
+  namespace_enabled = true
+  route53_enabled = true
+  rolebinding_enabled = true
 }
 ```
 
@@ -53,8 +54,6 @@ See the [examples/](examples/) folder for more information.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | namespace | The namespace to deploy the test application to | `string` |  | yes |
-| sqs_module_release | The version of the SQS module to use | `string` |  | yes |
-| namespace_module_release | The version of the namespace module to use | `string` |  | yes |
 | namespace_enabled | Enable the namespace module | `bool` |  | yes |
 | route53_enabled | Enable the route53 module | `bool` |  | yes |
 | rolebinding_enabled | Enable the rolebinding module | `bool` |  | yes |

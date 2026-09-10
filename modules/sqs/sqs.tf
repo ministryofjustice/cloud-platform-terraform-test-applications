@@ -1,5 +1,5 @@
 module "module_test_sqs" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-sqs?ref=${var.sqs_module_release}" # use the latest release
+  source = "github.com/ministryofjustice/cloud-platform-terraform-sqs?ref=v5.1.0"
 
   # Queue configuration
   sqs_name        = "module-test-queue"
@@ -14,7 +14,7 @@ module "module_test_sqs" {
   environment_name       = var.environment
   infrastructure_support = var.infrastructure_support
 
-  depends_on = [ module.namespace_create, resource.kubernetes_deployment_v1.module_test_deployment ]
+  depends_on = [module.namespace_create, resource.kubernetes_deployment_v1.module_test_deployment]
 }
 
 resource "aws_sqs_queue_policy" "module_test_sqs_policy" {

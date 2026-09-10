@@ -1,7 +1,8 @@
 module "sqs_application" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-test-applications/modules/sqs?ref=${var.sqs_test_application_release}"
+  source = "../"
 
-  namespace = "module-sqstest-namespace"
-  module_release = "v5.1.0"
-  namespace_module_release = "main"
+  namespace           = "module-sqstest-namespace"
+  namespace_enabled   = true
+  route53_enabled     = true
+  rolebinding_enabled = true
 }
